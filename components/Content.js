@@ -40,7 +40,7 @@ export default function Content({ products }) {
           <div className="mt-20 flex justify-between flex-wrap gap-y-10 ">
             {products.map((product) => {
               return (
-                <div className="relative w-64 h-[24rem] p-5 shadow-lg rounded-xl hover:-translate-y-5 duration-300">
+                <div className="relative w-64 h-[24rem] p-5 shadow-md rounded-xl hover:-translate-y-3 hover:shadow-xl duration-300">
                   <img
                     src={
                       "http://localhost:1337" +

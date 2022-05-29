@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Navbar() {
@@ -7,7 +8,9 @@ export default function Navbar() {
         <div className="w-full max-w-[1100px] mx-auto">
           <div className="w-full h-20 flex items-center justify-between ">
             <div>
-              <h1>LOGO</h1>
+              <Link href="/">
+                <a>LOGO</a>
+              </Link>
             </div>
             <div className="flex flex-row-reverse relative">
               <input
@@ -24,20 +27,28 @@ export default function Navbar() {
               </button>
             </div>
             <div className="flex items-center gap-3">
-              <button>
-                <img src="/Message.svg" alt="" />
-              </button>
-              <button>
-                <img src="/Bell.svg" alt="" />
-              </button>
-              <button>
-                <img src="/Bag.svg" alt="" className="-translate-y-[2px]" />
-              </button>
+              <Link href="/messege">
+                <a>
+                  <img src="/Message.svg" alt="" />
+                </a>
+              </Link>
+              <Link href="notification">
+                <a>
+                  <img src="/Bell.svg" alt="" />
+                </a>
+              </Link>
+              <Link href="/bag">
+                <a>
+                  <img src="/Bag.svg" alt="" className="-translate-y-[2px]" />
+                </a>
+              </Link>
             </div>
             <div>
-              <button>
-                <img src="/User.svg" alt="" />
-              </button>
+              <Link href="/user">
+                <a>
+                  <img src="/User.svg" alt="" />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
