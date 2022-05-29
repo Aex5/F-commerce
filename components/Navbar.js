@@ -27,7 +27,7 @@ export default function Navbar() {
               </button>
             </div>
             <div className="flex items-center gap-3">
-              <Link href="/messege">
+              <Link href="/inbox">
                 <a>
                   <img src="/Message.svg" alt="" />
                 </a>

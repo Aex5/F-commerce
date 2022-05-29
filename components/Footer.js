@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -18,11 +19,17 @@ export default function Footer() {
             <div className="w-[30rem] text-[#2f564f] flex justify-between">
               <div className="space-y-5">
                 <h3 className="text-xl font-semibold">Menu</h3>
-                <ul className="space-y-5">
-                  <li>Home</li>
-                  <li>Service</li>
-                  <li>Recipe</li>
-                </ul>
+                <div className="space-y-5 flex flex-col">
+                  <Link href="/">
+                    <a>Home</a>
+                  </Link>
+                  <Link href="inbox">
+                    <a>Inbox</a>
+                  </Link>
+                  <Link href="/notification">
+                    <a>Notification</a>
+                  </Link>
+                </div>
               </div>
               <div className="space-y-5">
                 <h3 className="text-xl font-semibold">Follow Us</h3>
@@ -37,7 +44,7 @@ export default function Footer() {
                 <ul className="space-y-5">
                   <li>Help Center</li>
                   <li>FAQ</li>
-                  <li>Comtact us</li>
+                  <li>Contact us</li>
                 </ul>
               </div>
             </div>
