@@ -1,9 +1,7 @@
-import React from "react";
-
-export default function Content() {
+export default function Content({ products }) {
   return (
     <>
-      <div className="w-full mt-10">
+      <div className="w-full mt-10 text-[#2f564f]">
         <div className="w-full max-w-[1100px] mx-auto">
           <div>
             <h2 className="text-xl title-font font-medium">Kategori Popular</h2>
@@ -39,68 +37,33 @@ export default function Content() {
           </div>
 
           {/* card list produk */}
-          <div className="mt-20 flex justify-between flex-wrap">
-            <div className="w-64 h-[23rem] p-5 shadow-md rounded-xl">
-              <img src="/maid.png" alt="" />
-              <p className="mt-3 text-xs">Maid - Original</p>
-              <p className="mt-5 text-lg font-semibold">Rp.1.500.000</p>
-              <p className="mt-2 text-xs">⭐4.9 | Terjual 500+</p>
-            </div>
-            <div className="w-64 h-[23rem] p-5 shadow-md rounded-xl">
-              <img src="/zerotwo.png" alt="" />
-              <p className="mt-3 text-xs">ZeroTwo - Draling In The Franxxx</p>
-              <p className="mt-5 text-lg font-semibold">Rp.1.500.000</p>
-              <p className="mt-2 text-xs">⭐4.9 | Terjual 500+</p>
-            </div>
-            <div className="w-64 h-[23rem] p-5 shadow-md rounded-xl">
-              <img src="/rem.png" alt="" />
-              <p className="mt-3 text-xs">
-                Rem - Re:Zero Kara Hajimeru Isekai Seikatsu
-              </p>
-              <p className="mt-5 text-lg font-semibold">Rp.1.500.000</p>
-              <p className="mt-2 text-xs">⭐4.9 | Terjual 500+</p>
-            </div>
-            <div className="w-64 h-[23rem] p-5 shadow-md rounded-xl">
-              <img src="/himikatoga.png" alt="" />
-              <p className="mt-3 text-xs">
-                Himiko Toga - Boku No Hero Academia
-              </p>
-              <p className="mt-5 text-lg font-semibold">Rp.1.500.000</p>
-              <p className="mt-2 text-xs">⭐4.9 | Terjual 500+</p>
-            </div>
-            <div className="w-64 h-[23rem] p-5 shadow-md rounded-xl">
-              <img src="/miku.png" alt="" />
-              <p className="mt-3 text-xs">
-                Himiko Toga - Boku No Hero Academia
-              </p>
-              <p className="mt-5 text-lg font-semibold">Rp.1.500.000</p>
-              <p className="mt-2 text-xs">⭐4.9 | Terjual 500+</p>
-            </div>
-            <div className="w-64 h-[23rem] p-5 shadow-md rounded-xl">
-              <img src="/ladyfox.png" alt="" />
-              <p className="mt-3 text-xs">
-                Himiko Toga - Boku No Hero Academia
-              </p>
-              <p className="mt-5 text-lg font-semibold">Rp.1.500.000</p>
-              <p className="mt-2 text-xs">⭐4.9 | Terjual 500+</p>
-            </div>
-            <div className="w-64 h-[23rem] p-5 shadow-md rounded-xl">
-              <img src="/tanjiro.png" alt="" />
-              <p className="mt-3 text-xs">
-                Himiko Toga - Boku No Hero Academia
-              </p>
-              <p className="mt-5 text-lg font-semibold">Rp.1.500.000</p>
-              <p className="mt-2 text-xs">⭐4.9 | Terjual 500+</p>
-            </div>
-            <div className="w-64 h-[23rem] p-5 shadow-md rounded-xl">
-              <img src="/minato.png" alt="" />
-              <p className="mt-3 text-xs">
-                Himiko Toga - Boku No Hero Academia
-              </p>
-              <p className="mt-5 text-lg font-semibold">Rp.1.500.000</p>
-              <p className="mt-2 text-xs">⭐4.9 | Terjual 500+</p>
-            </div>
+          <div className="mt-20 flex justify-between flex-wrap gap-y-10 ">
+            {products.map((product) => {
+              return (
+                <div className="relative w-64 h-[24rem] p-5 shadow-lg rounded-xl hover:-translate-y-5 duration-300">
+                  <img
+                    src={
+                      "http://localhost:1337" +
+                      product.attributes.thumbnail.data.attributes.formats
+                        .thumbnail.url
+                    }
+                    alt="thumbnail"
+                    className="w-[12rem] mx-auto"
+                  />
+                  <p className="mt-10 text-base">{product.attributes.name}</p>
+                  <p className="absolute mt-10 text-lg font-semibold bottom-10">
+                    Rp.{product.attributes.price}
+                  </p>
+                  <p className="absolute mt-2 text-xs bottom-5">
+                    {product.attributes.rating} | {product.attributes.sold}{" "}
+                    Terjual
+                  </p>
+                </div>
+              );
+            })}
           </div>
+
+          {/* produk terlaris */}
           <h2 className="pt-8 title-font text-2xl font-medium">
             Produk terlaris
           </h2>

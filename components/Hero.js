@@ -6,7 +6,7 @@ import "swiper/css/effect-fade";
 export default function Hero() {
   return (
     <>
-      <div className="w-full mt-10">
+      <div className="w-full mt-10 text-[#2f564f]">
         <div className="w-full max-w-[1100px] mx-auto">
           <h1 className="text-xl mb-10 title-font font-medium">
             Produk Terlaris Minggu Ini
