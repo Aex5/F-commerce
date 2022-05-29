@@ -1,7 +1,7 @@
 export default function Content({ products }) {
   return (
     <>
-      <div className="w-full mt-10 text-[#2f564f]">
+      <div className="w-full mt-16 text-[#2f564f]">
         <div className="w-full max-w-[1100px] mx-auto">
           <div>
             <h2 className="text-xl title-font font-medium">Kategori Popular</h2>

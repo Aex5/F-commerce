@@ -4,12 +4,14 @@ import React from "react";
 export default function Navbar() {
   return (
     <>
-      <div className="w-full border-b-2 ">
+      <div className="fixed top-0 z-50 w-full border-b-2 bg-white">
         <div className="w-full max-w-[1100px] mx-auto">
-          <div className="w-full h-20 flex items-center justify-between ">
+          <div className=" w-full h-24 flex items-center justify-between ">
             <div>
               <Link href="/">
-                <a>LOGO</a>
+                <a>
+                  <img src="/logo.svg" className="w-28"></img>
+                </a>
               </Link>
             </div>
             <div className="flex flex-row-reverse relative">

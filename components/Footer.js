@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="max-w-[1100px] mx-auto">
           <div className="flex items-start justify-between">
             <div>
-              <img src="/logo.png" alt="logo" />
-              <p className="w-[22rem] text-[#2f564f] tracking-[0.3px]">
+              <img src="/logo.svg" alt="logo" className="w-28" />
+              <p className="w-[22rem] text-[#2f564f] tracking-[0.3px] mt-5">
                 F-commerce is a platform for online retail. We help you to buy
                 our pruduct easily
               </p>
